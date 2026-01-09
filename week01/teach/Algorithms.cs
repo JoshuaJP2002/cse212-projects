@@ -39,9 +39,12 @@ public static class Algorithms {
         var count = 0;
         for (var i = 0; i < size; ++i)
             count += 1;
+        //O(n)
 
         return count;
     }
+
+
 
     /// <summary>
     /// The count variable is keeping track of the amount
@@ -54,6 +57,7 @@ public static class Algorithms {
         for (var i = 0; i < size; ++i)
         for (var j = 0; j < size; ++j)
             count += 1;
+        //O(n^2)
 
         return count;
     }
@@ -73,6 +77,7 @@ public static class Algorithms {
             start = middle + 1;
             count += 1;
         }
+        //O(log n)
 
         return count;
     }
