@@ -32,6 +32,8 @@ public static class Search {
     /// </summary>
     /// <param name="data">The array of numbers</param>
     /// <param name="target">The number we're looking for</param>
+    
+    /// The Big O notation is O(n)
     private static int SearchSorted1(int[] data, int target) {
         var count = 0;
         foreach (var item in data) {
@@ -51,6 +53,8 @@ public static class Search {
     /// <param name="target">The number we're looking for</param>
     /// <param name="start">The index of the starting section of the data to look in</param>
     /// <param name="end">The index of the ending section of the data to look in</param>
+    
+    /// The Big O notation is O(log n)
     private static int SearchSorted2(int[] data, int target, int start, int end) {
         if (end < start)
             return 1; // All done
@@ -63,3 +67,9 @@ public static class Search {
         return 1 + SearchSorted2(data, target, start, middle - 1);
     }
 }
+
+// Which function performs better in the worst case?
+// The SearchSorted2 function performs better in the worst case because it has a time complexity of O(log n),
+// while SearchSorted1 has a time complexity of O(n). This means that as the size of the input data increases, the
+// performance of SearchSorted2 degrades much more slowly compared to SearchSorted1.
+
